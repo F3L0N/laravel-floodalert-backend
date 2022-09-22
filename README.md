@@ -7,7 +7,7 @@
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
 </p>
 
-## LARALOOK
+## LARALOOK (FYP)
 
 The back-end of the flood monitoring system (LARALOOK) is my Final Year Project aims to provide a flood early warning for the users within a certain area where the system receives the data from the IoT devices and stores it into the database besides preparing APIs for the front-end client to consume. 
 
@@ -45,6 +45,16 @@ RESTful API is used in this system for the communication between the clients and
 
 Representational state transfer (REST) or RESTful web services is a way of providing interoperability between computer systems on the Internet. REST-compliant Web services allow requesting systems to access and manipulate textual representations of Web resources using a uniform and predefined set of stateless operations.
 
+## PostgreSQL/MySQL
+
+LARALOOK possesses four tables including 
+- stations
+- river level records
+- temperature records
+- water flow records
+
+<p align="center"><a href="https://laravel.com" target="_blank"><img src="README-img/db.png" width="500"></a></p>
+
 ## Docker
 
 Microservices were also used during the development phase as well as the production phase.
@@ -52,4 +62,10 @@ Microservices were also used during the development phase as well as the product
 <p align="center"><a href="https://laravel.com" target="_blank"><img src="README-img/docker.png" width="500"></a></p>
 
 All of the flood monitoring system components were containerized by using docker container before deploying to the server in order to optimize resources.
+
+## Interfaces
+
+<p align="left"><a href="https://laravel.com" target="_blank"><img src="README-img/Picture1.png" width="500"></a></p>
+<p align="right"><a href="https://laravel.com" target="_blank"><img src="README-img/Picture2.png" width="500"></a></p>
+<p align="left"><a href="https://laravel.com" target="_blank"><img src="README-img/Picture3.png" width="500"></a></p>
 
