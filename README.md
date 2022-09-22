@@ -23,7 +23,7 @@ Laravel is accessible, powerful, and provides tools required for large, robust a
 
 ## Architectural Design
 
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="README-img/archidesign.png" width="400"></a></p>
+<p align="center"><a href="https://laravel.com" target="_blank"><img src="README-img/archidesign.png" width="500"></a></p>
 
 Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
 
