@@ -7,57 +7,49 @@
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
 </p>
 
-## Backend of Flood Monitoring System
+## LARALOOK
 
-The back-end of the flood monitoring system is my Final Year Project aims to provide a flood early warning for the users within a certain area where the system receives the data from the IoT devices and stores it into the database besides preparing APIs for the front-end client to consume. 
-
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
-
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+The back-end of the flood monitoring system (LARALOOK) is my Final Year Project aims to provide a flood early warning for the users within a certain area where the system receives the data from the IoT devices and stores it into the database besides preparing APIs for the front-end client to consume. 
 
 ## Architectural Design
 
+Overall, the flood monitoring system was divided into three main components:
+- IoT device 
+- back-end (LARALOOK)
+- front-end
+
 <p align="center"><a href="https://laravel.com" target="_blank"><img src="README-img/archidesign.png" width="500"></a></p>
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+Starting from IoT devices, it sends data to be stored into the database and managed by LARALOOK through IoT gateway using MQTT broker. The IoT gateway must be connected to the database. 
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 1500 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+Second, the LARALOOK acts as a middleware and application server between the IoT gateway and front-end. Apart from database management, LARALOOK also provides resources to be used by the clients via RESTful APIs. 
 
-## Laravel Sponsors
+Lastly, the client will consume and display all the data into charts, graphs or any types of data representation that will be viewable by the users.
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
+## Model-View-Controller 
 
-### Premium Partners
+There are three levels of MVC architecture: 
+- model
+- view
+- controller
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[Many](https://www.many.co.uk)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- **[DevSquad](https://devsquad.com)**
-- **[OP.GG](https://op.gg)**
+<p align="center"><a href="https://laravel.com" target="_blank"><img src="README-img/mvc.png" width="500"></a></p>
 
-## Contributing
+The model is the part that interacts with the database to handle the data, logic and the rules. The view forms the part that interacts with the user by displaying the output and accepting the input in various forms. The controller sends commands to the model to update the data as well as send commands to the view to modify the data being accepted or displayed.
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+## RESTful API
 
-## Code of Conduct
+RESTful API is used in this system for the communication between the clients and the server.
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+<p align="center"><a href="https://laravel.com" target="_blank"><img src="README-img/api.png" width="500"></a></p>
 
-## Security Vulnerabilities
+Representational state transfer (REST) or RESTful web services is a way of providing interoperability between computer systems on the Internet. REST-compliant Web services allow requesting systems to access and manipulate textual representations of Web resources using a uniform and predefined set of stateless operations.
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+## Docker
 
-## License
+Microservices were also used during the development phase as well as the production phase.
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+<p align="center"><a href="https://laravel.com" target="_blank"><img src="README-img/docker.png" width="500"></a></p>
+
+All of the flood monitoring system components were containerized by using docker container before deploying to the server in order to optimize resources.
+
