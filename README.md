@@ -66,6 +66,7 @@ All of the flood monitoring system components were containerized by using docker
 ## Interfaces
 
 <p align="center"><a href="https://laravel.com" target="_blank"><img src="README-img/Picture1.png" width="400"> <img src="README-img/Picture2.png" width="400"></a></p>
-<p align="right"><a href="https://laravel.com" target="_blank"><img src="README-img/Picture2.png" width="400"></a></p>
-<p align="left"><a href="https://laravel.com" target="_blank"><img src="README-img/Picture3.png" width="400"></a></p>
+<p align="center"><a href="https://laravel.com" target="_blank"><img src="README-img/Picture3.png" width="400"> <img src="README-img/Picture4.png" width="400"></a></p>
+<p align="center"><a href="https://laravel.com" target="_blank"><img src="README-img/Picture5.png" width="400"> <img src="README-img/Picture6.png" width="400"></a></p>
+<p align="center"><a href="https://laravel.com" target="_blank"><img src="README-img/Picture7.png" width="400"></a></p>
 
